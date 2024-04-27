@@ -65,8 +65,6 @@ Due to a current issue in the Bash Shortcuts plugin that prevents flags from bei
 
 To update Reshade or the Auto HDR plugin, add the new files to the correct directories and trigger the shortcut twice to update the files in the game directories.
 
-To update Reshade or the Auto HDR plugin, add the new files to the correct directories and trigger the shortcut twice to update the files in the game directories.
-
 ## Limitations
 
 The limitations are the same as those for the Reshade Auto HDR plugin. For more details, refer to this [Twitter post](https://twitter.com/JavaidUsama/status/1763443358318428400).
