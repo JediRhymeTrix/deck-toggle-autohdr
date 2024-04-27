@@ -39,13 +39,13 @@ Due to a current issue in the Bash Shortcuts plugin that prevents flags from bei
    - Set the command for 32-bit games to:
 
         ```bash
-        /home/deck/Downloads/deck-toggle-autohdr/autohdr_shortcut_32bit.sh
+        sh +x /home/deck/Downloads/deck-toggle-autohdr/autohdr_shortcut_32bit.sh
         ```
 
    - Set the command for 64-bit games to:
 
         ```bash
-        /home/deck/Downloads/deck-toggle-autohdr/autohdr_shortcut_64bit.sh
+        sh +x /home/deck/Downloads/deck-toggle-autohdr/autohdr_shortcut_64bit.sh
         ```
 
    - Configure the toggles as shown in the screenshot below:
