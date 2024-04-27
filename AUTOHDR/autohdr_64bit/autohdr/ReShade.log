@@ -1,0 +1,270 @@
+12:50:03:105 [00312] | INFO  | Initializing crosire's ReShade version '6.0.1.1825' (64-bit) loaded from "D:\steamapps\common\Ultros\dxgi.dll" into "D:\steamapps\common\Ultros\Ultros.exe" (0x34994f58) ...
+12:50:03:122 [00312] | INFO  | Registering hooks for "user32.dll" ...
+12:50:03:122 [00312] | INFO  | > Libraries loaded.
+12:50:03:123 [00312] | INFO  | > Found 14 match(es). Installing ...
+12:50:03:139 [00312] | INFO  | Registering hooks for "C:\windows\system32\dinput.dll" ...
+12:50:03:140 [00312] | INFO  | > Delayed.
+12:50:03:140 [00312] | INFO  | Registering hooks for "C:\windows\system32\d2d1.dll" ...
+12:50:03:142 [00312] | INFO  | > Delayed.
+12:50:03:142 [00312] | INFO  | Registering hooks for "C:\windows\system32\d3d9.dll" ...
+12:50:03:143 [00312] | INFO  | > Delayed.
+12:50:03:144 [00312] | INFO  | Registering hooks for "C:\windows\system32\d3d10.dll" ...
+12:50:03:145 [00312] | INFO  | > Delayed.
+12:50:03:145 [00312] | INFO  | Registering hooks for "C:\windows\system32\d3d10_1.dll" ...
+12:50:03:146 [00312] | INFO  | > Delayed.
+12:50:03:146 [00312] | INFO  | Registering hooks for "C:\windows\system32\d3d11.dll" ...
+12:50:03:146 [00312] | INFO  | > Libraries loaded.
+12:50:03:146 [00312] | INFO  | > Found 3 match(es). Installing ...
+12:50:03:163 [00312] | INFO  | Registering hooks for "C:\windows\system32\d3d12.dll" ...
+12:50:03:164 [00312] | INFO  | > Delayed.
+12:50:03:164 [00312] | INFO  | Registering hooks for "C:\windows\system32\dxgi.dll" ...
+12:50:03:164 [00312] | INFO  | > Delayed until first call to an exported function.
+12:50:03:164 [00312] | INFO  | Registering hooks for "vrclient_x64.dll" ...
+12:50:03:165 [00312] | INFO  | > Delayed.
+12:50:03:165 [00312] | INFO  | Initialized.
+12:50:03:167 [00312] | INFO  | Redirecting CreateDXGIFactory2(Flags = 0, riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 0000000181CDD088) ...
+12:50:03:174 [00312] | INFO  | Installing export hooks for "C:\windows\system32\dxgi.dll" ...
+12:50:03:174 [00312] | INFO  | > Found 5 match(es). Installing ...
+12:50:03:225 [00312] | INFO  | Redirecting D3D11CreateDevice(pAdapter = 0000000065E37790, DriverType = 0, Software = 0000000000000000, Flags = 0x20, pFeatureLevels = 0000000010015770, FeatureLevels = 4, SDKVersion = 7, ppDevice = 0000000181CDD040, pFeatureLevel = 0000000181BEE594, ppImmediateContext = 0000000181CDD070) ...
+12:50:03:225 [00312] | INFO  | > Passing on to D3D11CreateDeviceAndSwapChain:
+12:50:03:225 [00312] | INFO  | Redirecting D3D11CreateDeviceAndSwapChain(pAdapter = 0000000065E37790, DriverType = 0, Software = 0000000000000000, Flags = 0x20, pFeatureLevels = 0000000010015770, FeatureLevels = 4, SDKVersion = 7, pSwapChainDesc = 0000000000000000, ppSwapChain = 0000000000000000, ppDevice = 0000000181CDD040, pFeatureLevel = 0000000181BEE594, ppImmediateContext = 0000000181CDD070) ...
+12:50:03:252 [00312] | INFO  | Using feature level 0xb100.
+12:50:03:252 [00312] | INFO  | Searching for add-ons (*.addon, *.addon64) in "D:\steamapps\common\Ultros" ...
+12:50:03:253 [00312] | INFO  | Loading add-on from "D:\steamapps\common\Ultros\AutoHDR64.addon" ...
+12:50:03:268 [00312] | INFO  | Registered add-on "AutoHDR64" v0.0.0.0 using ReShade API version 4.
+12:50:03:269 [00312] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 000000000010EAE8) ...
+12:50:03:291 [00312] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 000000000010E1A0) ...
+12:50:03:899 [00312] | INFO  | Redirecting D3D11CreateDevice(pAdapter = 0000000065E37790, DriverType = 0, Software = 0000000000000000, Flags = 0x820, pFeatureLevels = 0000000000000000, FeatureLevels = 0, SDKVersion = 7, ppDevice = 0000000181CE3158, pFeatureLevel = 0000000000000000, ppImmediateContext = 0000000181CE47E0) ...
+12:50:03:899 [00312] | INFO  | > Passing on to D3D11CreateDeviceAndSwapChain:
+12:50:03:899 [00312] | INFO  | Redirecting D3D11CreateDeviceAndSwapChain(pAdapter = 0000000065E37790, DriverType = 0, Software = 0000000000000000, Flags = 0x820, pFeatureLevels = 0000000000000000, FeatureLevels = 0, SDKVersion = 7, pSwapChainDesc = 0000000000000000, ppSwapChain = 0000000000000000, ppDevice = 0000000181CE3158, pFeatureLevel = 0000000000000000, ppImmediateContext = 0000000181CE47E0) ...
+12:50:03:922 [00312] | INFO  | Using feature level 0xb000.
+12:50:03:990 [00312] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 000000000010EB48) ...
+12:50:04:009 [00312] | INFO  | Redirecting IDXGIFactory2::CreateSwapChainForHwnd(this = 00000000009B1870, pDevice = 00000000652086D8, hWnd = 0000000000020076, pDesc = 000000000010EBF0, pFullscreenDesc = 000000000010EBD8, pRestrictToOutput = 0000000000000000, ppSwapChain = 000000000010EC90) ...
+12:50:04:009 [00312] | INFO  | > Dumping swap chain description:
+12:50:04:009 [00312] | INFO  |   +-----------------------------------------+-----------------------------------------+
+12:50:04:009 [00312] | INFO  |   | Parameter                               | Value                                   |
+12:50:04:009 [00312] | INFO  |   +-----------------------------------------+-----------------------------------------+
+12:50:04:009 [00312] | INFO  |   | Width                                   | 1280                                    |
+12:50:04:009 [00312] | INFO  |   | Height                                  | 720                                     |
+12:50:04:009 [00312] | INFO  |   | RefreshRate                             | 0                   1                   |
+12:50:04:009 [00312] | INFO  |   | Format                                  | DXGI_FORMAT_R8G8B8A8_UNORM              |
+12:50:04:009 [00312] | INFO  |   | Stereo                                  | FALSE                                   |
+12:50:04:009 [00312] | INFO  |   | ScanlineOrdering                        | 0                                       |
+12:50:04:009 [00312] | INFO  |   | Scaling                                 | 0                                       |
+12:50:04:009 [00312] | INFO  |   | SampleCount                             | 1                                       |
+12:50:04:009 [00312] | INFO  |   | SampleQuality                           | 0                                       |
+12:50:04:009 [00312] | INFO  |   | BufferUsage                             | 0x30                                    |
+12:50:04:009 [00312] | INFO  |   | BufferCount                             | 2                                       |
+12:50:04:009 [00312] | INFO  |   | Windowed                                | TRUE                                    |
+12:50:04:009 [00312] | INFO  |   | SwapEffect                              | 3                                       |
+12:50:04:009 [00312] | INFO  |   | AlphaMode                               | 0                                       |
+12:50:04:009 [00312] | INFO  |   | Flags                                   | 0x842                                   |
+12:50:04:009 [00312] | INFO  |   +-----------------------------------------+-----------------------------------------+
+12:50:04:072 [00312] | INFO  | Running on AMD Radeon Graphics (RADV VANGOGH) Driver 1155.35.
+12:50:04:516 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:04:517 [00312] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 000000006BB4F000, BufferCount = 2, Width = 1280, Height = 800, NewFormat = 28, SwapChainFlags = 0x842) ...
+12:50:04:517 [00312] | INFO  | Destroyed runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:04:518 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:05:920 [00480] | WARN  | Failed to resolve search path "E:\steamapps\common\TUNIC\reshade-shaders\AutoHDR-ReShade-main\" with error code 3.
+12:50:05:997 [00652] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Sepia.fx" in 0.047 s.
+12:50:06:003 [00636] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.058 s.
+12:50:06:031 [00644] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FilmGrain.fx" in 0.083 s.
+12:50:06:048 [00656] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Tonemap.fx" in 0.097 s.
+12:50:06:077 [00636] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ColorMatrix.fx" in 0.073 s.
+12:50:06:095 [00648] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LumaSharpen.fx" in 0.147 s.
+12:50:06:120 [00656] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\UIMask.fx" in 0.071 s.
+12:50:06:146 [00632] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ASCII.fx" in 0.202 s.
+12:50:06:184 [00648] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LUT.fx" in 0.088 s.
+12:50:06:186 [00656] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vibrance.fx" in 0.065 s.
+12:50:06:189 [00640] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Deband.fx" in 0.243 s.
+12:50:06:246 [00648] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Monochrome.fx" in 0.061 s.
+12:50:06:281 [00656] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vignette.fx" in 0.095 s.
+12:50:06:324 [00640] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DisplayDepth.fx" in 0.135 s.
+12:50:06:368 [00640] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DPX.fx" in 0.043 s.
+12:50:06:369 [00632] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\AutoHDR.fx" in 0.222 s with warnings:
+D:\steamapps\common\Ultros\Shader@0x000000006CA38BC0(355,16-41): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+D:\steamapps\common\Ultros\Shader@0x000000006CA38BC0(326,15-45): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+D:\steamapps\common\Ultros\Shader@0x000000006CA38BC0(489,15-29): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+D:\steamapps\common\Ultros\Shader@0x000000006CA38BC0(461,15-32): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+D:\steamapps\common\Ultros\Shader@0x000000006CA38BC0(514,16-32): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
+12:50:06:403 [00632] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Border.fx" in 0.032 s.
+12:50:06:409 [00644] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FXAA.fx" in 0.378 s.
+12:50:06:432 [00632] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Cartoon.fx" in 0.028 s.
+12:50:06:436 [00644] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Layer.fx" in 0.026 s.
+12:50:06:445 [00640] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FakeHDR.fx" in 0.077 s.
+12:50:06:471 [00644] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Levels.fx" in 0.034 s.
+12:50:06:471 [00632] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CAS.fx" in 0.039 s.
+12:50:06:492 [00644] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.021 s.
+12:50:06:504 [00648] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Nostalgia.fx" in 0.258 s with warnings:
+warning: V__Linear: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:06:640 [00636] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CRT.fx" in 0.562 s.
+12:50:06:694 [00652] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\SMAA.fx" in 0.697 s with warnings:
+warning: V__colorLinearSampler: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:06:713 [00636] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Curves.fx" in 0.072 s.
+12:50:06:723 [00652] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Splitscreen.fx" in 0.028 s.
+12:50:06:738 [00652] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor.fx" in 0.014 s.
+12:50:06:738 [00636] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Daltonize.fx" in 0.025 s.
+12:50:06:754 [00652] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor2.fx" in 0.016 s.
+12:50:31:511 [00312] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 000000006BB4F000, BufferCount = 2, Width = 1280, Height = 800, NewFormat = 28, SwapChainFlags = 0x842) ...
+12:50:31:512 [00312] | INFO  | Destroyed runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:31:512 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:31:553 [00480] | WARN  | Failed to resolve search path "E:\steamapps\common\TUNIC\reshade-shaders\AutoHDR-ReShade-main\" with error code 3.
+12:50:31:571 [00676] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.007 s.
+12:50:31:572 [00672] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ASCII.fx" in 0.008 s.
+12:50:31:575 [00680] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Deband.fx" in 0.009 s.
+12:50:31:575 [00684] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FilmGrain.fx" in 0.008 s.
+12:50:31:579 [00688] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LumaSharpen.fx" in 0.01 s.
+12:50:31:579 [00692] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Sepia.fx" in 0.009 s.
+12:50:31:585 [00696] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Tonemap.fx" in 0.014 s.
+12:50:31:585 [00676] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ColorMatrix.fx" in 0.013 s.
+12:50:31:590 [00672] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\AutoHDR.fx" in 0.018 s.
+12:50:31:593 [00688] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LUT.fx" in 0.014 s.
+12:50:31:593 [00680] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DisplayDepth.fx" in 0.018 s.
+12:50:31:596 [00684] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FXAA.fx" in 0.021 s.
+12:50:31:597 [00696] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\UIMask.fx" in 0.011 s.
+12:50:31:597 [00672] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Border.fx" in 0.007 s.
+12:50:31:598 [00676] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CRT.fx" in 0.012 s.
+12:50:31:601 [00688] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Monochrome.fx" in 0.007 s.
+12:50:31:602 [00680] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DPX.fx" in 0.008 s.
+12:50:31:607 [00672] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Cartoon.fx" in 0.01 s.
+12:50:31:608 [00696] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vibrance.fx" in 0.01 s.
+12:50:31:608 [00692] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\SMAA.fx" in 0.028 s with warnings:
+warning: V__colorLinearSampler: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:31:608 [00684] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Layer.fx" in 0.011 s.
+12:50:31:609 [00676] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Curves.fx" in 0.011 s.
+12:50:31:610 [00680] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FakeHDR.fx" in 0.007 s.
+12:50:31:615 [00696] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vignette.fx" in 0.006 s.
+12:50:31:617 [00688] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Nostalgia.fx" in 0.015 s with warnings:
+warning: V__Linear: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:31:618 [00684] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Levels.fx" in 0.01 s.
+12:50:31:618 [00676] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Daltonize.fx" in 0.008 s.
+12:50:31:618 [00692] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Splitscreen.fx" in 0.01 s.
+12:50:31:619 [00672] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CAS.fx" in 0.01 s.
+12:50:31:623 [00684] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.005 s.
+12:50:31:623 [00692] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor.fx" in 0.004 s.
+12:50:31:627 [00692] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor2.fx" in 0.003 s.
+12:50:55:962 [00312] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 000000006BB4F000, BufferCount = 2, Width = 1280, Height = 800, NewFormat = 28, SwapChainFlags = 0x842) ...
+12:50:55:963 [00312] | INFO  | Destroyed runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:55:964 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:50:55:967 [00480] | WARN  | Failed to resolve search path "E:\steamapps\common\TUNIC\reshade-shaders\AutoHDR-ReShade-main\" with error code 3.
+12:50:55:989 [00700] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ASCII.fx" in 0.01 s.
+12:50:55:991 [00704] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.011 s.
+12:50:55:994 [00708] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Deband.fx" in 0.012 s.
+12:50:55:994 [00712] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FilmGrain.fx" in 0.012 s.
+12:50:55:997 [00716] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LumaSharpen.fx" in 0.013 s.
+12:50:55:997 [00724] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Tonemap.fx" in 0.011 s.
+12:50:55:997 [00720] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Sepia.fx" in 0.012 s.
+12:50:56:001 [00704] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ColorMatrix.fx" in 0.009 s.
+12:50:56:001 [00700] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\AutoHDR.fx" in 0.012 s.
+12:50:56:007 [00708] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DisplayDepth.fx" in 0.013 s.
+12:50:56:011 [00716] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LUT.fx" in 0.014 s.
+12:50:56:012 [00724] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\UIMask.fx" in 0.014 s.
+12:50:56:013 [00712] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FXAA.fx" in 0.018 s.
+12:50:56:013 [00700] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Border.fx" in 0.011 s.
+12:50:56:015 [00704] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CRT.fx" in 0.014 s.
+12:50:56:015 [00708] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DPX.fx" in 0.007 s.
+12:50:56:019 [00716] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Monochrome.fx" in 0.007 s.
+12:50:56:024 [00712] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Layer.fx" in 0.011 s.
+12:50:56:025 [00700] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Cartoon.fx" in 0.012 s.
+12:50:56:027 [00724] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vibrance.fx" in 0.015 s.
+12:50:56:028 [00708] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FakeHDR.fx" in 0.013 s.
+12:50:56:029 [00704] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Curves.fx" in 0.013 s.
+12:50:56:030 [00720] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\SMAA.fx" in 0.032 s with warnings:
+warning: V__colorLinearSampler: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:56:031 [00712] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Levels.fx" in 0.006 s.
+12:50:56:032 [00700] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CAS.fx" in 0.006 s.
+12:50:56:033 [00716] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Nostalgia.fx" in 0.013 s with warnings:
+warning: V__Linear: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:50:56:034 [00724] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vignette.fx" in 0.007 s.
+12:50:56:036 [00704] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Daltonize.fx" in 0.006 s.
+12:50:56:036 [00712] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.005 s.
+12:50:56:037 [00720] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Splitscreen.fx" in 0.007 s.
+12:50:56:041 [00720] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor.fx" in 0.004 s.
+12:50:56:045 [00720] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor2.fx" in 0.003 s.
+12:51:07:386 [00312] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 000000006BB4F000, BufferCount = 2, Width = 1280, Height = 800, NewFormat = 28, SwapChainFlags = 0x842) ...
+12:51:07:387 [00312] | INFO  | Destroyed runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:51:07:387 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:51:07:405 [00480] | WARN  | Failed to resolve search path "E:\steamapps\common\TUNIC\reshade-shaders\AutoHDR-ReShade-main\" with error code 3.
+12:51:07:419 [00732] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ASCII.fx" in 0.006 s.
+12:51:07:419 [00736] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.005 s.
+12:51:07:419 [00740] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Deband.fx" in 0.005 s.
+12:51:07:420 [00744] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FilmGrain.fx" in 0.005 s.
+12:51:07:425 [00752] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Sepia.fx" in 0.008 s.
+12:51:07:426 [00756] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Tonemap.fx" in 0.007 s.
+12:51:07:427 [00748] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LumaSharpen.fx" in 0.01 s.
+12:51:07:427 [00736] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ColorMatrix.fx" in 0.008 s.
+12:51:07:430 [00740] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DisplayDepth.fx" in 0.01 s.
+12:51:07:431 [00732] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\AutoHDR.fx" in 0.012 s.
+12:51:07:433 [00744] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FXAA.fx" in 0.012 s.
+12:51:07:434 [00756] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\UIMask.fx" in 0.008 s.
+12:51:07:435 [00748] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LUT.fx" in 0.008 s.
+12:51:07:438 [00736] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CRT.fx" in 0.01 s.
+12:51:07:441 [00740] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DPX.fx" in 0.01 s.
+12:51:07:441 [00732] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Border.fx" in 0.01 s.
+12:51:07:442 [00744] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Layer.fx" in 0.009 s.
+12:51:07:444 [00756] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vibrance.fx" in 0.009 s.
+12:51:07:444 [00748] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Monochrome.fx" in 0.009 s.
+12:51:07:445 [00736] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Curves.fx" in 0.007 s.
+12:51:07:446 [00752] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\SMAA.fx" in 0.02 s with warnings:
+warning: V__colorLinearSampler: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:51:07:449 [00732] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Cartoon.fx" in 0.007 s.
+12:51:07:449 [00740] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FakeHDR.fx" in 0.008 s.
+12:51:07:450 [00744] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Levels.fx" in 0.007 s.
+12:51:07:452 [00756] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vignette.fx" in 0.008 s.
+12:51:07:453 [00736] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Daltonize.fx" in 0.008 s.
+12:51:07:453 [00752] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Splitscreen.fx" in 0.006 s.
+12:51:07:455 [00744] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.004 s.
+12:51:07:455 [00748] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Nostalgia.fx" in 0.011 s with warnings:
+warning: V__Linear: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:51:07:455 [00732] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CAS.fx" in 0.006 s.
+12:51:07:457 [00752] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor.fx" in 0.003 s.
+12:51:07:460 [00752] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor2.fx" in 0.003 s.
+12:56:57:424 [00312] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 000000006BB4F000, BufferCount = 2, Width = 1280, Height = 800, NewFormat = 28, SwapChainFlags = 0x842) ...
+12:56:57:426 [00312] | INFO  | Destroyed runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:56:57:426 [00312] | INFO  | Recreated runtime environment on runtime 000000006BB515F0 ("Z:\home\deck\Downloads\Auto-HDR_dx11_v2\ReShade.ini").
+12:56:57:493 [00480] | WARN  | Failed to resolve search path "E:\steamapps\common\TUNIC\reshade-shaders\AutoHDR-ReShade-main\" with error code 3.
+12:56:57:510 [00776] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.006 s.
+12:56:57:511 [00772] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ASCII.fx" in 0.008 s.
+12:56:57:514 [00780] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Deband.fx" in 0.009 s.
+12:56:57:519 [00788] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LumaSharpen.fx" in 0.012 s.
+12:56:57:520 [00784] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FilmGrain.fx" in 0.014 s.
+12:56:57:521 [00792] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Sepia.fx" in 0.012 s.
+12:56:57:522 [00776] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\ColorMatrix.fx" in 0.012 s.
+12:56:57:522 [00796] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Tonemap.fx" in 0.012 s.
+12:56:57:526 [00772] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\AutoHDR.fx" in 0.015 s.
+12:56:57:527 [00780] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DisplayDepth.fx" in 0.012 s.
+12:56:57:528 [00788] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LUT.fx" in 0.008 s.
+12:56:57:536 [00796] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\UIMask.fx" in 0.013 s.
+12:56:57:539 [00784] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FXAA.fx" in 0.019 s.
+12:56:57:541 [00780] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\DPX.fx" in 0.014 s.
+12:56:57:542 [00776] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CRT.fx" in 0.019 s.
+12:56:57:542 [00788] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Monochrome.fx" in 0.013 s.
+12:56:57:542 [00772] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Border.fx" in 0.015 s.
+12:56:57:543 [00796] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vibrance.fx" in 0.007 s.
+12:56:57:546 [00792] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\SMAA.fx" in 0.025 s with warnings:
+warning: V__colorLinearSampler: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:56:57:548 [00784] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Layer.fx" in 0.008 s.
+12:56:57:554 [00780] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\FakeHDR.fx" in 0.013 s.
+12:56:57:555 [00772] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Cartoon.fx" in 0.013 s.
+12:56:57:557 [00788] | WARN  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Nostalgia.fx" in 0.014 s with warnings:
+warning: V__Linear: texture does not support sRGB sampling (back buffer format is not RGBA8)
+
+12:56:57:557 [00796] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Vignette.fx" in 0.013 s.
+12:56:57:557 [00784] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Levels.fx" in 0.008 s.
+12:56:57:559 [00776] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Curves.fx" in 0.017 s.
+12:56:57:559 [00792] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Splitscreen.fx" in 0.012 s.
+12:56:57:561 [00772] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\CAS.fx" in 0.005 s.
+12:56:57:563 [00784] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.005 s.
+12:56:57:564 [00776] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Daltonize.fx" in 0.005 s.
+12:56:57:564 [00792] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor.fx" in 0.005 s.
+12:56:57:569 [00792] | INFO  | Successfully compiled "D:\steamapps\common\Ultros\reshade-shaders\Shaders\Technicolor2.fx" in 0.004 s.
