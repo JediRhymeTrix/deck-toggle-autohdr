@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Determine the script's directory
-script_dir=$(dirname "$BASH_SOURCE")/AUTOHDR/autohdr_64bit
+script_dir="$(dirname "$BASH_SOURCE")/AUTOHDR/autohdr_64bit"
 
 # Initialize appid variable
 appid=""
@@ -38,7 +38,7 @@ echo "Script run started at $(date)"
 for path in "${search_paths[@]}"; do
   manifest_file=$(find "$path" -name "appmanifest_${appid}.acf" 2>&1)
   if [[ -n $manifest_file ]]; then
-    found_path=$path
+    found_path="$path"
     break
   fi
 done
@@ -65,7 +65,7 @@ if [[ -f "${game_dir}/toggle_autohdr.sh" ]]; then
   bash "${game_dir}/toggle_autohdr.sh" 2>&1
 else
   echo "Copying toggle_autohdr.sh to ${game_dir}..."
-  cp "${script_dir}/toggle_autohdr.sh ${game_dir}/" 2>&1
+  cp "${script_dir}/toggle_autohdr.sh" "${game_dir}/" 2>&1
   echo "Running toggle_autohdr.sh..."
-  bash "${game_dir}/toggle_autohdr.sh ${script_dir}/autohdr" 2>&1
+  bash "${game_dir}/toggle_autohdr.sh" "${script_dir}/autohdr" 2>&1
 fi

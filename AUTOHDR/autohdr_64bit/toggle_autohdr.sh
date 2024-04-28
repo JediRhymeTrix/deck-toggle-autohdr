@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default SOURCE_DIR if not provided as an argument
-DEFAULT_SOURCE_DIR="/home/deck/Downloads/deck-toggle-autohdr/autohdr_64bit/autohdr"
+DEFAULT_SOURCE_DIR="/home/deck/Downloads/deck-toggle-autohdr/AUTOHDR/autohdr_64bit/autohdr"
 SOURCE_DIR="${1:-$DEFAULT_SOURCE_DIR}"
 
 SCRIPT_DIR=$(dirname "$0")
