@@ -24,7 +24,7 @@ Due to a current issue in the Bash Shortcuts plugin that prevents flags from bei
     to:
 
     ```python
-    self.shortcutProcess = subprocess.Popen(command, shell=False)
+    self.shortcutProcess = subprocess.Popen(' '.join(command), shell=True)
     ```
 
 3. Restart the Deck to apply changes.
