@@ -12,6 +12,8 @@ The included script will take the appid of the current game from Bash Shortcuts 
 
 ### Temporary Fix for Bash Shortcuts Plugin
 
+> **NOTE: If you have version 2.0.4 or later of the Bash Shortcuts plugin, you can ignore this step.**
+
 Due to a current issue in the Bash Shortcuts plugin that prevents flags from being passed correctly to scripts, you need to perform the following steps:
 
 1. Open the file `/home/deck/homebrew/plugins/bash-shortcuts/py_backend/instanceManager.py`.
