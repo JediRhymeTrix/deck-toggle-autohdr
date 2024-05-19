@@ -59,6 +59,17 @@ fi
 # Construct the game directory path
 game_dir="${found_path}/common/$installdir"
 
+# Adjust game_dir for UE4/5 game binaries
+for sub_dir in "${game_dir}"/*; do
+  if [[ -d "${sub_dir}/Binaries/Win64" && ! "${sub_dir}" =~ "Engine" ]]; then
+    game_dir="${sub_dir}/Binaries/Win64"
+    break
+  elif [[ -d "${sub_dir}/Binaries/Win32" && ! "${sub_dir}" =~ "Engine" ]]; then
+    game_dir="${sub_dir}/Binaries/Win32"
+    break
+  fi
+done
+
 # Check for toggle_autohdr.sh, run or copy and run, printing output directly
 if [[ -f "${game_dir}/toggle_autohdr.sh" ]]; then
   echo "Running existing toggle_autohdr.sh..."
