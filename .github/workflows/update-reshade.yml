@@ -1,0 +1,97 @@
+name: Update ReShade
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight
+
+jobs:
+  update-reshade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get latest ReShade version
+        id: get_version
+        run: |
+          latest_version=$(curl -s https://reshade.me/ | grep -oP 'ReShade_Setup_\K[0-9]+\.[0-9]+\.[0-9]+(?=_Addon\.exe)')
+          echo "Latest ReShade version: $latest_version"
+          echo "::set-output name=version::$latest_version"
+
+      - name: Check if new version is available
+        id: check_version
+        run: |
+          current_version=$(git tag --list 'ReShade_update_v*' | sort -V | tail -n 1 | grep -oP '[0-9]+\.[0-9]+\.[0-9]+' || true)
+          echo "Current version: $current_version"
+
+          if [ -z "$current_version" ]; then
+            echo "No current version found. Assuming update is needed."
+            echo "::set-output name=update_needed::true"
+          elif [ "$current_version" = "${{ steps.get_version.outputs.version }}" ]; then
+            echo "No new version available."
+            echo "::set-output name=update_needed::false"
+          else
+            echo "New version available."
+            echo "::set-output name=update_needed::true"
+          fi
+
+      - name: Download and extract ReShade
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          mkdir temp_dir
+          cd temp_dir
+          curl -L -o ReShade_Setup.exe "https://reshade.me/downloads/ReShade_Setup_${{ steps.get_version.outputs.version }}_Addon.exe"
+          sudo apt-get install p7zip-full
+          7z x ReShade_Setup.exe
+          mv ReShade32.dll ../AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
+          mv ReShade64.dll ../AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
+          cd ..
+
+      - name: Prepare directory for zipping
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          mkdir deck-toggle-autohdr
+          shopt -s extglob
+          mv !(deck-toggle-autohdr|temp_dir|.*) deck-toggle-autohdr/
+
+      - name: Create artifact zip
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          zip -r "Deck Toggle AutoHDR v${{ steps.get_version.outputs.version }}.zip" deck-toggle-autohdr
+
+      - name: Create GitHub release
+        if: steps.check_version.outputs.update_needed == 'true'
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
+          release_name: ReShade Update v${{ steps.get_version.outputs.version }} UNTESTED
+          body: |
+            Updated ReShade version to ${{ steps.get_version.outputs.version }}
+
+            NOTE: This release and was generated automatically with the latest available ReShade build and is UNTESTED. Use it at your own risk.
+          draft: false
+          prerelease: true
+
+      - name: Upload Release Asset
+        if: steps.check_version.outputs.update_needed == 'true'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: "Deck Toggle AutoHDR v${{ steps.get_version.outputs.version }}.zip"
+          asset_name: "Deck Toggle AutoHDR v${{ steps.get_version.outputs.version }}.zip"
+          asset_content_type: application/zip
+
+      - name: Push new tag
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
+          git push origin ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
