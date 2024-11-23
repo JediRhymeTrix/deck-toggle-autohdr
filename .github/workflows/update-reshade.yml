@@ -55,6 +55,7 @@ jobs:
         body: "Updated ReShade version to ${{ steps.get_version.outputs.version }}"
         draft: false
         prerelease: true
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Push new tag
       if: steps.check_version.outputs.update_needed == 'true'
