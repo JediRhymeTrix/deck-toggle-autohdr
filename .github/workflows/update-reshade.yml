@@ -40,18 +40,20 @@ jobs:
       - name: Download and extract ReShade
         if: steps.check_version.outputs.update_needed == 'true'
         run: |
+          mkdir temp_dir
+          cd temp_dir
           curl -L -o ReShade_Setup.exe "https://reshade.me/downloads/ReShade_Setup_${{ steps.get_version.outputs.version }}_Addon.exe"
           sudo apt-get install p7zip-full
-          7z x ReShade_Setup.exe -oreshade_extracted
-          mv reshade_extracted/ReShade32.dll AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
-          mv reshade_extracted/ReShade64.dll AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
+          7z x ReShade_Setup.exe
+          mv ReShade32.dll ../AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
+          mv ReShade64.dll ../AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
+          cd ..
 
       - name: Prepare directory for zipping
         if: steps.check_version.outputs.update_needed == 'true'
         run: |
           mkdir deck-toggle-autohdr
-          shopt -s extglob
-          mv !(deck-toggle-autohdr|ReShade_Setup.exe) deck-toggle-autohdr/
+          mv AUTOHDR deck-toggle-autohdr/
 
       - name: Create artifact zip
         if: steps.check_version.outputs.update_needed == 'true'
