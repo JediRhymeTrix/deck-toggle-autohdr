@@ -11,24 +11,13 @@ This guide provides instructions for setting up an easy way to toggle Auto HDR o
 
 ### Temporary Fix for Bash Shortcuts Plugin
 
-> **NOTE: If you have version 2.0.4 or later of the Bash Shortcuts plugin, you can ignore this step.**
+Bash Shortcuts is currently unavailable on the Decky plugin store due to it being incompatible with the latest Steam Client.
 
-Due to a current issue in the Bash Shortcuts plugin that prevents flags from being passed correctly to scripts, you need to perform the following steps:
+- While the SDH-Stewardship team works on releasing a patched build to the store, you can find a built prerelease of the plugin [here](https://github.com/SDH-Stewardship/bash-shortcuts/pull/1#issuecomment-2460919165).
 
-1. Open the file `/home/deck/homebrew/plugins/bash-shortcuts/py_backend/instanceManager.py`.
-2. Change line 28 from:
+- Extract it to the `/home/deck/homebrew/plugins/` directory on your Deck.
 
-    ```python
-    self.shortcutProcess = subprocess.Popen(command, shell=True)
-    ```
-
-    to:
-
-    ```python
-    self.shortcutProcess = subprocess.Popen(' '.join(command), shell=True)
-    ```
-
-3. Restart the Deck to apply changes.
+- Restart the Deck to apply changes.
 
 ### Setting Up Auto HDR
 
@@ -80,7 +69,7 @@ The limitations are the same as those for the Reshade Auto HDR plugin. For more 
 - **@JavaidUsama** - For sharing the the AutoHDR files on [Twitter](https://twitter.com/JavaidUsama/status/1763443358318428400).
 - **[u/ManSore](https://www.reddit.com/r/SteamDeck/comments/1b4dl1k/comment/kupo8b3/)** - For providing the 32-bit version of the AutoHDR files.
 - **[Tormak](https://github.com/Tormak9970)** - The original author the Bash Shortcuts plugin.
-- **[SDH-Stewardship](https://github.com/SDH-Stewardship)**: The team behind the Decky plugin stewardship program for supporting the Bash Shortcuts plugin.
+- **[SDH-Stewardship](https://github.com/SDH-Stewardship)**: The team behind the Decky Plugin Stewardship Program and its contributors for supporting the Bash Shortcuts plugin.
 - **Decky Loader Team** - For making plugin integration possible on the Steam Deck.
 
 ## Note
