@@ -49,13 +49,14 @@ jobs:
     - name: Create GitHub release
       if: steps.check_version.outputs.update_needed == 'true'
       uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
         release_name: ReShade Update v${{ steps.get_version.outputs.version }} UNTESTED
         body: "Updated ReShade version to ${{ steps.get_version.outputs.version }}"
         draft: false
         prerelease: true
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Push new tag
       if: steps.check_version.outputs.update_needed == 'true'
