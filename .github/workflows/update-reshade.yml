@@ -50,8 +50,8 @@ jobs:
         if: steps.check_version.outputs.update_needed == 'true'
         run: |
           mkdir deck-toggle-autohdr
-          mv * deck-toggle-autohdr/
-          mv .[^.]* deck-toggle-autohdr/  # Move hidden files (e.g., .gitignore)
+          shopt -s extglob
+          mv !(deck-toggle-autohdr) deck-toggle-autohdr/
 
       - name: Create artifact zip
         if: steps.check_version.outputs.update_needed == 'true'
