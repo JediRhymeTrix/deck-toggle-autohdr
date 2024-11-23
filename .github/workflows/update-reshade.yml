@@ -73,7 +73,7 @@ jobs:
           body: |
             Updated ReShade version to ${{ steps.get_version.outputs.version }}
 
-            NOTE: This release and was generated automatically with the latest available ReShade build and is UNTESTED. Use it at your own risk.
+            NOTE: This release  was generated automatically with the latest available ReShade build and is UNTESTED. Use it at your own risk.
           draft: false
           prerelease: true
 
