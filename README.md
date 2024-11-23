@@ -1,12 +1,11 @@
 # Steam Deck Auto HDR Toggle
 
-This guide provides instructions for setting up an easy way to toggle Auto HDR on a per-game level for the Steam Deck OLED using Decky Loader and the Bash Shortcuts plugin.
-The included script will take the appid of the current game from Bash Shortcuts and automatically copy/link the required files into the game directory.
+This guide provides instructions for setting up an easy way to toggle Auto HDR on a per-game level for the Steam Deck OLED using Decky Loader and the Bash Shortcuts plugin. The included script will take the appid of the current game from Bash Shortcuts and automatically copy/link the required files into the game directory.
 
 ## Prerequisites
 
 1. **Decky Loader** - Install from [Decky Loader](https://decky.xyz/).
-2. **Bash Shortcuts Plugin** - Install from [Bash Shortcuts Plugin for Decky](https://github.com/Tormak9970/bash-shortcuts).
+2. **Bash Shortcuts Plugin** - Install from [Bash Shortcuts Plugin for Decky](https://github.com/SDH-Stewardship/bash-shortcuts).
 
 ## Instructions
 
@@ -33,7 +32,7 @@ Due to a current issue in the Bash Shortcuts plugin that prevents flags from bei
 
 ### Setting Up Auto HDR
 
-1. Clone or download and unzip this repo to the `Downloads` directory on your Deck.
+1. Clone or download and unzip this repo to the `Downloads` directory on your Deck. (or grab a **VERIFIED** build from [releases](https://github.com/JediRhymeTrix/deck-toggle-autohdr/releases))
 2. Boot into game mode and navigate to the Bash Shortcuts plugin.
 3. Create two new shortcuts for 32-bit and 64-bit games respectively:
    - Navigate to plugin config > add shortcut.
@@ -65,7 +64,11 @@ Due to a current issue in the Bash Shortcuts plugin that prevents flags from bei
 
 5. To disable Auto HDR, repeat Step 4 with the appropriate shortcut. The same shortcut will remove Auto HDR from the game.
 
-To update Reshade or the Auto HDR plugin, add the new files to the correct directories and trigger the shortcut twice to update the files in the game directories.
+### Updating ReShade
+
+To update ReShade or the Auto HDR plugin, go to the [releases](https://github.com/JediRhymeTrix/deck-toggle-autohdr/releases) page and download the latest version or select a specific release with the version of ReShade you want. Note that releases marked with **UNTESTED** were auto-generated with the newest version of ReShade and aren't guaranteed to be compatible with this Auto-HDR plugin.
+
+To update, add the new files to the correct directories and trigger the shortcut twice to update the files in the game directories.
 
 ## Limitations
 
@@ -76,7 +79,8 @@ The limitations are the same as those for the Reshade Auto HDR plugin. For more 
 - **Reshade and Auto-HDR Plugin Developers** - For building the functionality.
 - **@JavaidUsama** - For sharing the the AutoHDR files on [Twitter](https://twitter.com/JavaidUsama/status/1763443358318428400).
 - **[u/ManSore](https://www.reddit.com/r/SteamDeck/comments/1b4dl1k/comment/kupo8b3/)** - For providing the 32-bit version of the AutoHDR files.
-- **Tormak** - For developing the Bash Shortcuts plugin.
+- **[Tormak](https://github.com/Tormak9970)** - The original author the Bash Shortcuts plugin.
+- **[SDH-Stewardship](https://github.com/SDH-Stewardship)**: The team behind the Decky plugin stewardship program for supporting the Bash Shortcuts plugin.
 - **Decky Loader Team** - For making plugin integration possible on the Steam Deck.
 
 ## Note
