@@ -46,10 +46,17 @@ jobs:
           mv reshade_extracted/ReShade32.dll AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
           mv reshade_extracted/ReShade64.dll AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
 
+      - name: Prepare artifact directory
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          mkdir deck-toggle-autohdr
+          mv * deck-toggle-autohdr/
+          mv .[^.]* deck-toggle-autohdr/  # Move hidden files (e.g., .gitignore)
+
       - name: Create artifact zip
         if: steps.check_version.outputs.update_needed == 'true'
         run: |
-          zip -r deck-toggle-autohdr.zip . -x "*.git*"
+          zip -r deck-toggle-autohdr.zip deck-toggle-autohdr
 
       - name: Create GitHub release
         if: steps.check_version.outputs.update_needed == 'true'
