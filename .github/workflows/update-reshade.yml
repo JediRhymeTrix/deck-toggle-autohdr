@@ -51,15 +51,9 @@ jobs:
         run: |
           zip -r deck-toggle-autohdr.zip . -x "*.git*"
 
-      - name: Upload artifact
-        if: steps.check_version.outputs.update_needed == 'true'
-        uses: actions/upload-artifact@v3
-        with:
-          name: deck-toggle-autohdr
-          path: deck-toggle-autohdr.zip
-
       - name: Create GitHub release
         if: steps.check_version.outputs.update_needed == 'true'
+        id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -72,6 +66,17 @@ jobs:
             NOTE: This release and was generated automatically with the latest available ReShade build and is UNTESTED. Use it at your own risk.
           draft: false
           prerelease: true
+
+      - name: Upload Release Asset
+        if: steps.check_version.outputs.update_needed == 'true'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: deck-toggle-autohdr.zip
+          asset_name: deck-toggle-autohdr.zip
+          asset_content_type: application/zip
 
       - name: Push new tag
         if: steps.check_version.outputs.update_needed == 'true'
