@@ -21,7 +21,7 @@ Bash Shortcuts is currently unavailable on the Decky plugin store due to it bein
 
 ### Setting Up Auto HDR
 
-1. Clone or download and unzip this repo to the `Downloads` directory on your Deck. (or grab a **VERIFIED** build from [releases](https://github.com/JediRhymeTrix/deck-toggle-autohdr/releases))
+1. Clone or download (or grab a **VERIFIED** build from [releases](https://github.com/JediRhymeTrix/deck-toggle-autohdr/releases)) and unzip this repo to the `Downloads` directory on your Deck.
 2. Boot into game mode and navigate to the Bash Shortcuts plugin.
 3. Create two new shortcuts for 32-bit and 64-bit games respectively:
    - Navigate to plugin config > add shortcut.
