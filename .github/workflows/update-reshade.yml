@@ -43,8 +43,8 @@ jobs:
         curl -L -o ReShade_Setup.exe "https://reshade.me/downloads/ReShade_Setup_${{ steps.get_version.outputs.version }}_Addon.exe"
         sudo apt-get install p7zip-full
         7z x ReShade_Setup.exe -oreshade_extracted
-        mv reshade_extracted/ReShade32.dll autohdr/dxgi.dll
-        mv reshade_extracted/ReShade64.dll autohdr/dxgi.dll
+        mv reshade_extracted/ReShade32.dll AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
+        mv reshade_extracted/ReShade64.dll AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
 
     - name: Create GitHub release
       if: steps.check_version.outputs.update_needed == 'true'
