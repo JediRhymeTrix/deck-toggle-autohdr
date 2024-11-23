@@ -46,6 +46,18 @@ jobs:
           mv reshade_extracted/ReShade32.dll AUTOHDR/autohdr_32bit/autohdr/dxgi.dll
           mv reshade_extracted/ReShade64.dll AUTOHDR/autohdr_64bit/autohdr/dxgi.dll
 
+      - name: Create artifact zip
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          zip -r deck-toggle-autohdr.zip . -x "*.git*"
+
+      - name: Upload artifact
+        if: steps.check_version.outputs.update_needed == 'true'
+        uses: actions/upload-artifact@v2
+        with:
+          name: deck-toggle-autohdr
+          path: deck-toggle-autohdr.zip
+
       - name: Create GitHub release
         if: steps.check_version.outputs.update_needed == 'true'
         uses: actions/create-release@v1
