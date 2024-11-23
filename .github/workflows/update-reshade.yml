@@ -1,61 +1,65 @@
 name: Update ReShade
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
+    - cron: "0 0 * * *" # Runs daily at midnight
 
 jobs:
   update-reshade:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Get latest ReShade version
-      id: get_version
-      run: |
-        latest_version=$(curl -s https://reshade.me/ | grep -oP 'ReShade_Setup_\K[0-9]+\.[0-9]+\.[0-9]+(?=_Addon\.exe)')
-        echo "Latest ReShade version: $latest_version"
-        echo "::set-output name=version::$latest_version"
+      - name: Get latest ReShade version
+        id: get_version
+        run: |
+          latest_version=$(curl -s https://reshade.me/ | grep -oP 'ReShade_Setup_\K[0-9]+\.[0-9]+\.[0-9]+(?=_Addon\.exe)')
+          echo "Latest ReShade version: $latest_version"
+          echo "::set-output name=version::$latest_version"
 
-    - name: Check if new version is available
-      id: check_version
-      run: |
-        current_version=$(git tag --list 'ReShade_update_v*' | sort -V | tail -n 1 | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
-        echo "Current version: $current_version"
-        if [ "$current_version" = "${{ steps.get_version.outputs.version }}" ]; then
-          echo "No new version available."
-          echo "::set-output name=update_needed::false"
-        else
-          echo "New version available."
-          echo "::set-output name=update_needed::true"
-        fi
+      - name: Check if new version is available
+        id: check_version
+        run: |
+          current_version=$(git tag --list 'ReShade_update_v*' | sort -V | tail -n 1 | grep -oP '[0-9]+\.[0-9]+\.[0-9]+')
+          echo "Current version: $current_version"
 
-    - name: Download and extract ReShade
-      if: steps.check_version.outputs.update_needed == 'true'
-      run: |
-        curl -L -o ReShade_Setup.exe "https://reshade.me/downloads/ReShade_Setup_${{ steps.get_version.outputs.version }}_Addon.exe"
-        sudo apt-get install p7zip-full
-        7z x ReShade_Setup.exe -oreshade_extracted
-        mv reshade_extracted/ReShade32.dll autohdr/dxgi.dll
-        mv reshade_extracted/ReShade64.dll autohdr/dxgi.dll
+          if [ -z "$current_version" ]; then
+            echo "No current version found. Assuming update is needed."
+            echo "::set-output name=update_needed::true"
+          elif [ "$current_version" = "${{ steps.get_version.outputs.version }}" ]; then
+            echo "No new version available."
+            echo "::set-output name=update_needed::false"
+          else
+            echo "New version available."
+            echo "::set-output name=update_needed::true"
+          fi
 
-    - name: Create GitHub release
-      if: steps.check_version.outputs.update_needed == 'true'
-      uses: actions/create-release@v1
-      with:
-        tag_name: ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
-        release_name: ReShade Update v${{ steps.get_version.outputs.version }} UNTESTED
-        body: "Updated ReShade version to ${{ steps.get_version.outputs.version }}"
-        draft: false
-        prerelease: true
+      - name: Download and extract ReShade
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          curl -L -o ReShade_Setup.exe "https://reshade.me/downloads/ReShade_Setup_${{ steps.get_version.outputs.version }}_Addon.exe"
+          sudo apt-get install p7zip-full
+          7z x ReShade_Setup.exe -oreshade_extracted
+          mv reshade_extracted/ReShade32.dll autohdr/dxgi.dll
+          mv reshade_extracted/ReShade64.dll autohdr/dxgi.dll
 
-    - name: Push new tag
-      if: steps.check_version.outputs.update_needed == 'true'
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git tag ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
-        git push origin ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
+      - name: Create GitHub release
+        if: steps.check_version.outputs.update_needed == 'true'
+        uses: actions/create-release@v1
+        with:
+          tag_name: ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
+          release_name: ReShade Update v${{ steps.get_version.outputs.version }} UNTESTED
+          body: "Updated ReShade version to ${{ steps.get_version.outputs.version }}"
+          draft: false
+          prerelease: true
+
+      - name: Push new tag
+        if: steps.check_version.outputs.update_needed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
+          git push origin ReShade_update_v${{ steps.get_version.outputs.version }}_UNTESTED
