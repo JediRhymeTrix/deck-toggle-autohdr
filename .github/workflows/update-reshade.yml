@@ -23,7 +23,11 @@ jobs:
       - name: Check if new version is available
         id: check_version
         run: |
-          current_version=$(git tag --list 'ReShade_update_v*' | sort -V | tail -n 1 | grep -oP '[0-9]+\.[0-9]+\.[0-9]+' || true)
+          # Fetch all tags to ensure we have the latest
+          git fetch --tags
+
+          # Extract the latest version number from tags, ignoring any suffix
+          current_version=$(git tag --list 'ReShade_update_v*' | awk -F'_' '{print substr($3, 2)}' | sort -V | tail -n 1 || true)
           echo "Current version: $current_version"
 
           if [ -z "$current_version" ]; then
