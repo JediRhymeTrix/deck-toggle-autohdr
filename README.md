@@ -1,5 +1,9 @@
 # Steam Deck Auto HDR Toggle
 
+> **⚠️ NOTE:**  
+> This mod relies on the **Bash Shortcuts** Decky plugin, which is **no longer being maintained**.  
+> It is **recommended** to use the Auto-HDR support provided by the [LetMeReshade](https://github.com/itsOwen/LetMeReShade) plugin instead.
+
 This guide provides instructions for setting up an easy way to toggle Auto HDR on a per-game level for the Steam Deck OLED using Decky Loader and the Bash Shortcuts plugin. The included script will take the appid of the current game from Bash Shortcuts and automatically copy/link the required files into the game directory.
 
 ## Prerequisites
